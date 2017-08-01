@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <h1>Timeline</h1>
+    <p><%= notice %></p>
+    <div class="create"><%= link_to "Make a Babble", new_babbler_path, class:"square_btn btn-lg" %></div>
+    <br>
+      <% @babblers.each do |babbler| %>
+      <div class= "row">
+        <div class= "panel panel-default">
+          <div class="panel-body">
+            <h4><strrong><%= babbler.content %></strrong></h4>
+            <%= link_to "Edit", edit_babbler_path(babbler.id), class: 'btn btn-default btn-sm'%>
+            <%= link_to "Delete", babbler_path(babbler.id), method: :delete, data:{confirm: 'Are you sure to delete?' }, class: 'btn btn-default btn-sm' %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <br>
+      <br>
+      <div class="row col-md-2 col-md-offset-10 col-sm-10">
+        <%= link_to "Back to Top", root_path, class: "btn_normal btn-md" %>
+      </div>
+  </div>
+</div>

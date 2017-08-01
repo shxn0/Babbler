@@ -1,0 +1,133 @@
+.container{
+  padding-bottom: 100px;
+}
+
+h1 {
+  position: relative;
+  padding-left: 1.2em;
+  line-height: 1.4;
+}
+
+h1:before{
+  font-family: FontAwesome;
+  content: "\f075";
+  position: absolute;
+  font-size: 1em;
+  left: 0;
+  top: 0;
+  color: #5ab9ff;
+}
+
+.create {
+ text-align:center;
+ 
+}
+
+.square_btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.square_btn:active {/*押したとき*/
+    border: solid 1px #03A9F4;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+.btn_normal {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 0 8px;
+    text-decoration: none;
+    color: #67c5ff;
+    transition: .4s;
+}
+
+.btn_normal:before{
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 4px;
+   top:100%;
+   left: 0;
+   border-radius: 3px;
+   background:#67c5ff;
+   transition: .2s;
+}
+
+.btn_normal:after{
+   position: absolute;
+   content: '';
+   width: 100%;
+   height: 4px;
+   top:0;
+   left: 0;
+   border-radius: 3px;
+   background:#67c5ff;
+   transition: .2s;
+}
+
+.btn_normal:hover:before {
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+}
+
+.btn_normal:hover:after {
+    top: 3px;
+}
+
+.panel{
+    word-wrap: break-word; //折り返し
+}
+
+
+///以下ボタン
+
+.unq_btn2 a{
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  margin: 5px;
+}
+.unq_btn2 .fa-stack-2x {
+  color: black;
+  font-size:70px;
+}
+.unq_btn2 .fa-stack-1x{
+  display: inline-block;  
+  position: relative;
+  font-size: 20px;
+  top: 12px;
+  left:5px;
+  transition: .4s;
+}
+.unq_btn2 .fa-twitter {
+  color: #74c1f8;
+}
+.unq_btn2 .fa-facebook {
+  color: #668ad8;
+}
+.unq_btn2 .fa-get-pocket {
+  color: #f79393;
+}
+.unq_btn2 .fa-rss {
+  color: #acde71;
+}
+.unq_btn2 .fa-google-plus{
+  color: #ed7168;
+}
+.unq_btn2 a:hover .fa-stack-1x {
+  -ms-transform: rotateX(360deg);
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}

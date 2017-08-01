@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Babbler</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <!-- <div>はブロック要素に対して使用され、<span>はインライン要素に対して使用される -->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%# <ul style="list-style:none;"> %>
+          <%= link_to "Babbles", new_babbler_path, class:"navbar-brand" %>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Top", root_path %></li>
+            <li><%= link_to "Timeline", babblers_path %></li>
+
+          </ul>
+        </div>
+          
+      </div>
+    </nav>
+  </header>
+
+<%= yield %>
+
+    <footer>
+      <p>株式会社ABC</p>
+      <p>© 2015-2017 Copyright ABC Corp</p>
+    </footer>
+    
+</body>
+</html>

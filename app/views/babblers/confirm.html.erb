@@ -1,0 +1,16 @@
+
+
+<div class="container">
+  <div class="col-md-8 col-md-offset-2 col-sm-10">
+    <h1>Are you sure to send?</h1>
+    <%= form_for(@babbler) do |f| %>
+      <%= f.hidden_field :content %>
+      <p>Content:<%=@babbler.content %></p>
+      <%= f.submit "Comfirm", class:'btn btn-primary'%>
+    <% end %>
+    <%= form_for(@babbler, url:new_babbler_path, method:'get') do |f| %>
+      <%= f.hidden_field :content %>
+      <%= f.submit "Back", name:'back', class: 'btn btn-default'%>
+    <% end %>
+  </div>
+</div>

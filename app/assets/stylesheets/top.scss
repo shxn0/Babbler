@@ -1,0 +1,72 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header{
+    background:white;
+    margin:0;
+    width: 100%;
+}
+
+html{
+  position: relative;
+  min-height: 100%; //最小値
+}
+
+footer{
+  background-color:#1f200b;
+  width: 100%;
+  padding: 20px 0 10px 0;
+  color: white;
+  margin: auto;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+
+.navbar-default{
+  border:0;
+}
+
+.navbar{
+  background-color:#1f200b;
+  color:white;
+  margin-bottom:0px;
+}
+
+.navbar-default{
+  .navbar-brand{
+    color:#ccc;
+    &:hover{
+      color:white;
+    }
+  }
+}
+
+.navbar-nav > li > a{
+    color:#ccc;
+    &:hover, &:focus{
+      color:white;
+    }
+  }
+
+h1 {
+    padding-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+}
+
+.box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+.box p {
+    margin: 0; 
+    padding: 0;
+    text-align:center;
+    font-size:large;
+    font-family: 'Quicksand', sans-serif;
+}
