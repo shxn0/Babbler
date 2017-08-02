@@ -40,6 +40,7 @@ class BabblersController < ApplicationController
 
   def confirm
     @babbler= Babbler.new(babblers_params)
+    render :new if @babbler.invalid?
   end
 
 private 
